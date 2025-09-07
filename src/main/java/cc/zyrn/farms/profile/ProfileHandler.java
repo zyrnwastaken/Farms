@@ -1,10 +1,11 @@
 package cc.zyrn.farms.profile;
 
 import cc.zyrn.farms.Farms;
-import cc.zyrn.farms.farm.Farm;
+
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 
 public class ProfileHandler {
@@ -23,6 +24,10 @@ public class ProfileHandler {
 
     public final void handleRemoval(Profile profile) {
 
+    }
+
+    public final Optional<Profile> getProfile(UUID uuid) {
+        return Optional.ofNullable(profileMap.get(uuid));
     }
 
 }
